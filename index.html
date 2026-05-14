@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ahmed_coder | Cybersecurity Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600;700&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cyber: '#32CD32',
+            abyss: '#7000FF',
+            glass: 'rgba(10, 10, 10, 0.62)',
+            lightglass: 'rgba(20, 20, 20, 0.72)'
+          },
+          boxShadow: {
+            neon: '0 0 35px rgba(50, 205, 50, 0.16), 0 0 70px rgba(112, 0, 255, 0.12)',
+          }
+        }
+      }
+    }
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="min-h-screen overflow-x-hidden bg-black text-white antialiased font-mono">
+  <canvas id="starfield" class="fixed inset-0 z-0"></canvas>
+  <div class="absolute inset-0 bg-black/80 backdrop-blur-sm"></div>
+  <div class="pointer-events-none fixed inset-0 z-0 overflow-hidden" id="cursor-flare"></div>
+  <main class="relative z-10 mx-auto flex min-h-screen w-full max-w-7xl flex-col px-4 py-8 sm:px-6 lg:px-8">
+    <header class="mb-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between text-sm text-slate-400 sm:mb-12">
+      <div class="rounded-2xl border border-cyber/30 bg-glass px-4 py-3 shadow-neon backdrop-blur-xl">
+        <span class="mr-2 text-cyber">Cybersecurity Architect</span>
+        <span class="text-slate-500">| Arch / CachyOS / Red Team</span>
+      </div>
+      <nav class="flex flex-wrap gap-3 text-cyber/90">
+        <a href="#skills" class="transition hover:text-white">المهارات</a>
+        <a href="#projects" class="transition hover:text-white">المشاريع</a>
+        <a href="#terminal" class="transition hover:text-white">الطرفية</a>
+      </nav>
+    </header>
+
+    <section class="relative mb-12 flex min-h-[70vh] flex-col items-center justify-center text-center overflow-hidden">
+      <div class="hero-grid absolute inset-0 -z-10"></div>
+      <div class="glass-card mx-auto max-w-4xl overflow-hidden px-6 py-16 sm:px-10">
+        <div class="hero-panel absolute inset-0 bg-black/15 backdrop-blur-2xl"></div>
+        <div class="relative z-10">
+          <p class="mb-4 uppercase tracking-[0.35em] text-cyber text-opacity-80">Hyper-Speed Security Portfolio</p>
+          <div class="hero-title inline-flex items-center justify-center gap-4">
+            <div class="hero-ring"></div>
+            <h1 class="text-5xl font-semibold tracking-tight text-white sm:text-7xl">
+              <span class="glitch" data-text="Ahmed_coder">Ahmed_coder</span>
+            </h1>
+          </div>
+          <p class="mt-6 max-w-2xl text-lg leading-8 text-slate-300 sm:text-xl">
+            Architecting Secure Systems | Breaking Digital Barriers
+          </p>
+          <div class="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+            <a href="#skills" class="glass-button inline-flex items-center justify-center rounded-full border border-cyber/40 bg-cyber/5 px-8 py-3 text-sm font-semibold text-cyber transition duration-300 hover:border-cyber hover:bg-cyber/15 hover:text-white glow-link">
+              استكشف مهاراتي
+            </a>
+            <a href="#projects" class="glass-button inline-flex items-center justify-center rounded-full border border-abyss/40 bg-abyss/5 px-8 py-3 text-sm font-semibold text-abyss transition duration-300 hover:border-abyss hover:bg-abyss/15 hover:text-white glow-link">
+              مشاهدة المشاريع
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="pointer-events-none absolute -right-28 top-12 hidden h-40 w-40 rounded-full bg-cyber/12 blur-3xl sm:block"></div>
+      <div class="pointer-events-none absolute -left-24 bottom-24 hidden h-28 w-28 rounded-full bg-abyss/15 blur-3xl sm:block"></div>
+    </section>
+
+    <section id="skills" class="mb-12 space-y-6">
+      <div class="glass-card p-6 sm:p-8 fade-up" style="--delay:0.1s;">
+        <div class="flex items-center justify-between gap-4">
+          <div>
+            <p class="text-cyber text-sm uppercase tracking-[0.3em]">Core Capabilities</p>
+            <h2 class="mt-3 text-3xl font-semibold text-white">تقنيات القوة</h2>
+          </div>
+          <span class="text-sm text-slate-500">Focused, One Section at a Time</span>
+        </div>
+        <div class="mt-8 space-y-4">
+          <article class="skill-row">
+            <div class="skill-marker cyber"></div>
+            <div>
+              <h3 class="mb-2 text-xl font-semibold text-cyber">Low-Level Mastery</h3>
+              <p class="text-slate-300">C++ و Rust لبناء أنظمة عالية الأداء وقابلة للتوسع دون التضحية بالأمان.</p>
+            </div>
+          </article>
+          <article class="skill-row">
+            <div class="skill-marker abyss"></div>
+            <div>
+              <h3 class="mb-2 text-xl font-semibold text-abyss">System Domination</h3>
+              <p class="text-slate-300">خبير Linux، Arch، CachyOS، وإدارة الأنظمة من مستوى kernel إلى shell.</p>
+            </div>
+          </article>
+          <article class="skill-row">
+            <div class="skill-marker cyber"></div>
+            <div>
+              <h3 class="mb-2 text-xl font-semibold text-cyber">Offensive Security</h3>
+              <p class="text-slate-300">اختراق التطبيقات، كرائة الشبكات، واختبارات الاستغلال المخصصة للهدف.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <div class="glass-card p-6 sm:p-8 fade-up" style="--delay:0.2s;">
+        <div class="flex items-center justify-between gap-4">
+          <div>
+            <p class="text-cyber text-sm uppercase tracking-[0.3em]">Toolchain</p>
+            <h2 class="mt-3 text-3xl font-semibold text-white">Toolkit</h2>
+          </div>
+          <span class="text-sm text-slate-500">Precision tools for deep penetration.</span>
+        </div>
+        <div class="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-1">
+          <span class="tool-chip">Metasploit</span>
+          <span class="tool-chip">Burp Suite</span>
+          <span class="tool-chip">Nmap</span>
+          <span class="tool-chip">Wireshark</span>
+        </div>
+        <div class="mt-8 rounded-3xl border border-slate-700 bg-black/40 p-5 text-slate-300 shadow-neon">
+          <p class="text-sm uppercase tracking-[0.25em] text-slate-500">Platform Focus</p>
+          <p class="mt-3 text-lg font-medium">هندسة أمان شبكية، تحليل بنية النظام، وسيناريوهات اختراق متقدمة.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="terminal" class="mb-12 fade-up" style="--delay:0.3s;">
+      <div class="glass-card overflow-hidden p-6 sm:p-8">
+        <div class="mb-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+          <div>
+            <p class="text-cyber text-sm uppercase tracking-[0.3em]">Cyber Terminal</p>
+            <h2 class="mt-2 text-3xl font-semibold text-white">وحدة التحكم الافتراضية</h2>
+          </div>
+          <div class="rounded-full border border-slate-700 bg-slate-950/60 px-4 py-2 text-sm text-slate-300">Active Session</div>
+        </div>
+        <div id="terminal-log" class="terminal-window h-[320px] overflow-y-auto rounded-3xl border border-slate-800 bg-[#050505]/95 p-5 text-[0.95rem] text-slate-300 shadow-neon">
+          <!-- logs added by JS -->
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="mb-12 space-y-6">
+      <div class="glass-card p-6 sm:p-8 fade-up" style="--delay:0.4s;">
+        <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+          <div>
+            <p class="text-cyber text-sm uppercase tracking-[0.3em]">Secure Deployments</p>
+            <h2 class="mt-3 text-3xl font-semibold text-white">مشاريع بارزة</h2>
+          </div>
+          <span class="text-sm text-slate-500">Each project explained clearly, one block at a time.</span>
+        </div>
+      </div>
+      <div class="space-y-6">
+        <article class="project-card glass-card p-6 sm:p-8 fade-up" style="--delay:0.5s;">
+          <div class="mb-5 flex items-center justify-between gap-4">
+            <span class="project-badge">Web Exploits</span>
+            <span class="text-xs uppercase tracking-[0.3em] text-slate-500">Red Team</span>
+          </div>
+          <h3 class="mb-3 text-2xl font-semibold text-white">هندسة هجمات تطبيقات الويب</h3>
+          <p class="text-slate-300">باستخدام هجمات XSS، CSRF، SSRF، وفحص تطبيقات الويب الآمنة لبناء نماذج دفاعية حقيقية.</p>
+          <div class="mt-6 flex flex-wrap gap-3">
+            <span class="project-tag">OWASP</span>
+            <span class="project-tag">Burp</span>
+            <span class="project-tag">Browser Exploits</span>
+          </div>
+        </article>
+        <article class="project-card glass-card p-6 sm:p-8 fade-up" style="--delay:0.6s;">
+          <div class="mb-5 flex items-center justify-between gap-4">
+            <span class="project-badge">C++ System Tools</span>
+            <span class="text-xs uppercase tracking-[0.3em] text-slate-500">Kernel-Level</span>
+          </div>
+          <h3 class="mb-3 text-2xl font-semibold text-white">أدوات نظام عالية الأداء</h3>
+          <p class="text-slate-300">برمجيات مراقبة الذاكرة، أدوات استجابة للحوادث، وأدوات إدارة عمليات آمنة لبيئات الإنتاج.</p>
+          <div class="mt-6 flex flex-wrap gap-3">
+            <span class="project-tag">C++</span>
+            <span class="project-tag">Rust</span>
+            <span class="project-tag">Linux</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <footer class="mt-auto py-8 text-center text-slate-500">
+      <p>© 2026 Ahmed_coder — درب الأمان السيبراني</p>
+    </footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
